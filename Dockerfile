@@ -9,4 +9,4 @@ COPY --from=github-mcp /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-cert
 
 EXPOSE 8080
 
-CMD ["mcp-proxy", "--port", "8080", "--host", "0.0.0.0", "--", "github-mcp-server", "stdio"]
+CMD ["mcp-proxy", "--pass-environment", "--port", "8080", "--host", "0.0.0.0", "--", "github-mcp-server", "stdio"]
